@@ -5,26 +5,27 @@
 \usepackage{amssymb}
 \usepackage[T1]{fontenc}
 
+\usepackage{parskip}
+% apparently using \\ or newline for simulated paragraph spaces is bad practice. So I will use parskip as per overleafs documentation. 
+
+
 \begin{document}
 
 \author{George B. Dantzig}
 \title{Maximization of a Linear Function of Variables Subject to Linear Inequalities}
 \maketitle
 
-The general problem indicated in the title is easily transformed, by any one of several methods, to one which maximizes a linear form of non-negative variables subject to a system of linear equalities. For example, consider the linear inequality $ax+by+c<0$. The linear inequality can be replaced by a linear equality in nonnegative variables by writing, instead $a(x_1-x_2) + b(y_1-y_2)+c-z=0$, where $x_1\geqq 0$. $x_2 \geqq$, $y_1 \geqq 0$, $z\geqq 0$. The basic problem throughout this chapter will be consider in the following form:
-\newline
+The general problem indicated in the title is easily transformed, by any one of several methods, to one which maximizes a linear form of non-negative variables subject to a system of linear equalities. For example, consider the linear inequality $ax+by+c<0$. The linear inequality can be replaced by a linear equality in nonnegative variables by writing, instead $a(x_1-x_2) + b(y_1-y_2)+c-z=0$, where $x_1\geqq 0$, $x_2 \geqq$  0, $y_1 \geqq 0$, $z\geqq 0$. The basic problem throughout this chapter will be consider in the following form:
+
+% With the addition of parskip make sure to not have newlines between the statements and hte equations. Doing so gives too much space above/below the equations. 
 
 \textbf{Problem: }\textit{Find the vlaues of }$\lambda_1, \lambda_2, \dots,\lambda_n$ \textit{which maximize the linear form}
-
 \begin{equation}
 	\lambda_1 c_1 + \lambda_2 c_2 + \dots + \lambda_n c_n
 \end{equation}
-
 \textit{subject to the conditions that}
-
 \begin{equation}
 	\lambda_j \geqq 0 \quad (j=1,2,\dots, n)
 \end{equation}
-
 
 \end{document}
