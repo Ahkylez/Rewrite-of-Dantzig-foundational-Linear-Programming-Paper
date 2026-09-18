@@ -3,6 +3,7 @@
 % leqno - option that makes it so the numbers appear on the left. 
 
 \usepackage{amssymb}
+\usepackage{amsmath}
 \usepackage[T1]{fontenc}
 
 \usepackage{parskip}
@@ -25,7 +26,19 @@ The general problem indicated in the title is easily transformed, by any one of 
 \end{equation}
 \textit{subject to the conditions that}
 \begin{equation}
-	\lambda_j \geqq 0 \quad (j=1,2,\dots, n)
+	% Notice in the original paper the j=1... part is aligned right. I am struggling to add that. 
+	\lambda_j \geqq 0 \quad (j=1,2,\dots,n)
 \end{equation}
+\textit{and}
+\begin{equation}
+	% Using gather instead of align because it simply needs to be centered. 
+	\begin{gathered}
+	\lambda_1 a_{11} + \lambda_2 a_{12} + \dots + \lambda_n a_{1n} = b_1,\\
+	\lambda_1 a_{21} + \lambda_2 a_{22} + \dots + \lambda_n a_{2n} = b_2,\\
+	\vdots\\ % We could also have \dotfill
+	\lambda_1 a_{m1} + \lambda_2 a_{m2} + \dots + \lambda_n a_{mn} = b_m
+	\end{gathered}
+\end{equation}
+
 
 \end{document}
